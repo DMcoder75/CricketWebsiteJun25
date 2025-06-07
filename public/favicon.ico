@@ -1,0 +1,57 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified version for favicon -->
+  <defs>
+    <radialGradient id="favBall" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="favBat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" fill="#F8F9FA" rx="4"/>
+  
+  <!-- Radiating lines -->
+  <g opacity="0.4">
+    <line x1="16" y1="16" x2="28" y2="4" stroke="#000000" stroke-width="0.5"/>
+    <line x1="16" y1="16" x2="4" y2="4" stroke="#000000" stroke-width="0.5"/>
+    <line x1="16" y1="16" x2="28" y2="28" stroke="#000000" stroke-width="0.5"/>
+    <line x1="16" y1="16" x2="4" y2="28" stroke="#000000" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Cricket bats -->
+  <g transform="translate(16, 16)">
+    <g transform="rotate(45)">
+      <rect x="6" y="-0.6" width="6" height="1.2" rx="0.6" fill="url(#favBat)" opacity="0.8"/>
+    </g>
+    <g transform="rotate(-45)">
+      <rect x="6" y="-0.6" width="6" height="1.2" rx="0.6" fill="url(#favBat)" opacity="0.8"/>
+    </g>
+    <g transform="rotate(135)">
+      <rect x="6" y="-0.6" width="6" height="1.2" rx="0.6" fill="url(#favBat)" opacity="0.8"/>
+    </g>
+    <g transform="rotate(-135)">
+      <rect x="6" y="-0.6" width="6" height="1.2" rx="0.6" fill="url(#favBat)" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Impact effects -->
+  <circle cx="6" cy="6" r="0.8" fill="#000000" opacity="0.4"/>
+  <circle cx="26" cy="8" r="0.6" fill="#000000" opacity="0.3"/>
+  <circle cx="8" cy="26" r="0.7" fill="#000000" opacity="0.4"/>
+  <circle cx="24" cy="24" r="0.5" fill="#000000" opacity="0.3"/>
+  
+  <!-- Central cricket ball -->
+  <circle cx="16" cy="16" r="5" fill="url(#favBall)" stroke="#FFFFFF" stroke-width="0.3"/>
+  
+  <!-- Cricket ball seam -->
+  <path d="M12 16 Q16 11 20 16 Q16 21 12 16" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.8" stroke-dasharray="1.5,0.8"/>
+  <path d="M12 16 Q16 11 20 16 Q16 21 12 16" stroke="#FFFFFF" stroke-width="0.6" fill="none" opacity="0.6" stroke-dasharray="1,0.8" transform="rotate(180 16 16)"/>
+  
+  <!-- Brand mark -->
+  <text x="16" y="14" font-family="Arial, sans-serif" font-size="4" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CH</text>
+  <text x="16" y="20" font-family="Arial, sans-serif" font-size="2" text-anchor="middle" fill="#FFD700">CRICKET</text>
+</svg>
