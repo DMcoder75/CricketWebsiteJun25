@@ -1,0 +1,39 @@
+{
+  "name": "crichattric-website",
+  "version": "1.0.0",
+  "description": "CricHattric deployment configuration for Hostinger",
+  "main": "server.js",
+  "scripts": {
+    "setup": "npm install --production",
+    "build": "npm run build",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "npm run dev",
+    "postinstall": "npm run build"
+  },
+  "hostinger": {
+    "type": "nodejs",
+    "version": "18.x",
+    "entry": "server.js",
+    "buildCommand": "npm run build",
+    "startCommand": "npm start",
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "3000",
+      "HOSTNAME": "0.0.0.0"
+    },
+    "domains": ["crichattric.com", "www.crichattric.com"],
+    "ssl": true,
+    "gzip": true,
+    "cache": {
+      "static": "1y",
+      "api": "0"
+    }
+  },
+  "deployment": {
+    "platform": "hostinger",
+    "method": "git",
+    "branch": "main",
+    "autoDeployment": true,
+    "buildOnDeploy": true
+  }
+}

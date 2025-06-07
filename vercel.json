@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "name": "crichattric-website",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "CRICKET_API_KEY": "@cricket_api_key",
+    "NEXT_PUBLIC_SITE_URL": "@site_url"
+  },
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  }
+}
